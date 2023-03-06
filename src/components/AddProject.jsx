@@ -9,7 +9,7 @@ const AddProject = () => {
 
   const handleAddProject = (e) => {
     e.preventDefault();
-    fetch(``, {
+    fetch(`http://localhost:9292/projects`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

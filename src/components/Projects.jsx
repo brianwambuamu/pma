@@ -11,8 +11,8 @@ const Projects = ({ projects, setProjects }) => {
 
   const handleDelete = (id,e) => {
     e.preventDefault()
-  //  const filteredProjects = projects.filter((project) => project.id != id)
-  //  return setProjects(filteredProjects);
+   const filteredProjects = projects.filter((project) => project.id != id)
+   return setProjects(filteredProjects);
  console.log(id)
   fetch(`http://localhost:9292/projects/${id}`,{
     method: "DELETE",
