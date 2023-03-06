@@ -140,7 +140,7 @@ nav > button > a:hover {
 }
 .home-text > a > button:hover {
   background-color: transparent;
-  color: #1d3e68;
+  color: black;
   cursor: pointer;
 }
 .home-text > p {
