@@ -4,12 +4,20 @@ import { PROJECTS } from '../assets/data';
 
 const Projects = ({ projects, setProjects }) => {
   useEffect(() => {
-    setProjects(PROJECTS);
+    fetch(`http://localhost:9292/projects`)
+    .then(r => r.json())
+    .then(d => setProjects(d))
   }, []);
 
-  const handleDelete = (id) => {
-   const filteredProjects = projects.filter((project) => project.id != id)
-   return setProjects(filteredProjects);
+  const handleDelete = (id,e) => {
+    e.preventDefault()
+  //  const filteredProjects = projects.filter((project) => project.id != id)
+  //  return setProjects(filteredProjects);
+ console.log(id)
+  fetch(`http://localhost:9292/projects/${id}`,{
+    method: "DELETE",
+ headers: {"accept": "application-json"}
+  })
   }
 
   return (
@@ -34,7 +42,7 @@ const Projects = ({ projects, setProjects }) => {
                 <i class='fa-solid fa-pen-to-square'></i>
                 <i
                   class='fa-solid fa-trash'
-                  onClick={() => handleDelete(project.id)}
+                  onClick={(e) => handleDelete(project.id,e)}
                 ></i>
               </div>
             </NavLink>

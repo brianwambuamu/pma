@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { MEMBERS } from '../assets/data'
 
 const ProjectMembers = () => {
   const { id } = useParams();
 
-  // const findProject = id => {
-
-  // }
+useEffect(() => {
+  fetch(`http://localhost:9292/project-members`)
+  .then(r => r.json())
+  .then(d => console.log(d))
+},[])
 
   return (
     <div className='project-members-container'>
