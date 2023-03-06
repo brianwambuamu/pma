@@ -6,7 +6,7 @@ const NavBar = ({ user, setUser }) => {
   return (
     <div className='header'>
       <header>
-        <section className='logo'>PMA</section>
+        <section className='logo'>Project App Management</section>
         <nav>
           <NavLink to='/'>Home</NavLink>
           {user ? (
