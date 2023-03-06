@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import img from '../assets/project.jpeg'
+import img from '../assets/hub-01-management.jpg'
 
 const AddProject = () => {
   const [title, setTitle] = useState('');
