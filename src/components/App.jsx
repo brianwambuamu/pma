@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import './App.css';
 import NavBar from './NavBar';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useParams } from 'react-router-dom';
 import Login from './Login';
 import Home from './Home';
 import Projects from './Projects';
 import AddProject from './AddProject';
+import ProjectMembers from './ProjectMembers';
 
 function App() {
   const [user, setUser] = useState(true);
   const [projects, setProjects] = useState([])
+  const { id } = useParams();
 
   return (
     <div className='App'>
@@ -23,6 +25,9 @@ function App() {
         </Route>
         <Route exact path='/add-project'>
           <AddProject />
+        </Route>
+        <Route exact path='/project/:id'>
+          <ProjectMembers />
         </Route>
         <Route exact path='/'>
           <Home user={user} setUser={setUser} />
