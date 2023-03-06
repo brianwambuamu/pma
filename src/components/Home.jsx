@@ -9,7 +9,7 @@ const Home = ({ user, setUser }) => {
     <div className='home-container'>
      <section className="home-text">
 
-      <h1>Software. Faster.</h1>
+      <h1>PROJECT</h1>
       <p>
         From planning to production, this pma will simplify all the projects into an application where one will be able to view the project or task which he/she will be doing and the team mates who they will cooperate.
       </p>

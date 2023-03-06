@@ -20,7 +20,7 @@ const NavBar = ({ user, setUser }) => {
             </>
           ) : (
             <button>
-              <NavLink to='/login'>Login / Register</NavLink>
+              <NavLink to='/login'>Login</NavLink>
             </button>
           )}
         </nav>
