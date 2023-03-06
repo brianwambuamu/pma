@@ -16,6 +16,7 @@ const AddProject = () => {
       },
       body: JSON.stringify({ title, description }),
     });
+    
     setTitle('');
     setDescription('');
     history.push('/projects');
