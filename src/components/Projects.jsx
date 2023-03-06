@@ -27,10 +27,10 @@ console.log(reversedProjects)
       <div className='all-projects-container'>
         {projects.map((project) => {
           return (
-            <NavLink
+            <div
               className='project'
               key={project.id}
-              to={`/project/${project.id}`}
+              // to={`/project/${project.id}`}
             >
               <section>
                 <h2>{project.title}</h2>
@@ -46,7 +46,7 @@ console.log(reversedProjects)
                   onClick={(e) => handleDelete(project.id,e)}
                 ></i>
               </div>
-            </NavLink>
+            </div>
           );
         })}
       </div>
