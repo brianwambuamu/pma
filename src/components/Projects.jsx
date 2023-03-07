@@ -40,7 +40,8 @@ console.log(reversedProjects)
                 </details>
               </section>
               <div className='project-icons'>
-                <i class='fa-solid fa-pen-to-square'></i>
+                <i class='fa-solid fa-pen-to-square'
+                onClick={(e) => handleEdit(project.id,e)}></i>
                 <i
                   class='fa-solid fa-trash'
                   onClick={(e) => handleDelete(project.id,e)}
